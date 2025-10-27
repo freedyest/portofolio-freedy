@@ -1,13 +1,34 @@
+import { Button } from "@/components/ui/button";
 export default function Header() {
   return (
-    <section className="bg-gray-950 text-white py-6 px-6">
+    <section className=" bg-peach text-primary  px-6">
       <div className="container flex mx-auto px-4 text-center justify-between items-center">
-        <h1 className="text-3xl font-bold">Freedy</h1>
-        <div className="gap-3 px-2 flex font-semibold">
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Portofolio</a>
-          <a href="">Contact</a>
+        <h1 className="text-3xl py-3 font-bold">Freedy</h1>
+        <div className=" flex text-lg font-bold ">
+          <Button
+            variant="ghost"
+            className="transition-all px-2 text-lg font-semibold duration-300 hover:bg-peach hover:text-current hover:scale-125 hover:font-bold"
+          >
+            Home
+          </Button>
+          <Button
+            variant="ghost"
+            className="transition-all px-2 text-lg font-semibold duration-300 hover:bg-transparent hover:text-current hover:scale-125 hover:font-bold"
+          >
+            About
+          </Button>
+          <Button
+            variant="ghost"
+            className="transition-all px-2 text-lg font-semibold duration-300 hover:bg-transparent hover:text-current hover:scale-125 hover:font-bold"
+          >
+            Portfolio
+          </Button>
+          <Button
+            variant="ghost"
+            className="transition-all px-2 text-lg font-semibold duration-300 hover:bg-transparent hover:text-current hover:scale-125 hover:font-bold"
+          >
+            Contact
+          </Button>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center pt-20 bg-gray-950 text-white px-6">
       <motion.img
-        src="/foto.png"
+        src="/tes.png"
         alt="Foto Freedy"
         className="w-32 h-32 rounded-full mb-6"
         initial={{ opacity: 0, scale: 0.8 }}
