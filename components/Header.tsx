@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Github, Linkedin, Mail, Code2, Sparkles, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (

@@ -1,6 +1,29 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Code2, Github, Linkedin, Mail, Instagram } from "lucide-react";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiTailwindcss,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+} from "react-icons/si";
+
+const iconMap = {
+  JavaScript: SiJavascript,
+  TypeScript: SiTypescript,
+  Python: SiPython,
+  Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  "Tailwind CSS": SiTailwindcss,
+  React: SiReact,
+  "Next.js": SiNextdotjs,
+  "Node.js": SiNodedotjs,
+  Express: SiExpress,
+};
+
 export default function Hero() {
   const myAbility = [
     "JavaScript",
@@ -13,45 +36,86 @@ export default function Hero() {
     "Node.js",
     "Express",
   ];
+
   return (
     <section className="bg-warmyellow relative min-h-screen overflow-hidden flex flex-col items-center justify-center text-center py-12 pt-24 px-6">
       {/* content */}
-      <div className="relative z-10 max-w-4xl mx-auto items-center flex flex-col">
-        <motion.div
-          className="relative inline-block mb-4 "
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-        >
-          <motion.div
-            className="absolute inset-0 rounded-full z-0 bg-peach"
-            animate={{
-              scale: [1, 1.1, 1],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
 
-          <motion.img
-            src="/tes.png"
-            alt="Foto Freedy"
-            className="w-48 h-48 z-10 rounded-full border-4 border-peach relative object-cover "
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-          />
+      <div className="relative z-10 max-w-4xl mx-auto items-center flex flex-col">
+        <div className="flex">
+          <div className="flex flex-col">
+            {/* //icon myAbility */}
+            {myAbility.map((skill) => {
+              const Icon = iconMap[skill];
+              return (
+                <div
+                  key={skill}
+                  className="flex flex-col items-center text-center"
+                >
+                  {typeof Icon === "string" ? (
+                    <img src={Icon} alt={skill} className="w-10 h-10" />
+                  ) : (
+                    <Icon size={20} className="text-primary" />
+                  )}
+                  <span className="text-sm mt-2 flex flex-col">{skill}</span>
+                </div>
+              );
+            })}
+          </div>
           <motion.div
-            className="border-warmyellow bg-primary absolute -bottom-2 -right-2 w-12 h-12 rounded-full flex items-center justify-center border-4 shadow-lg"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            className="relative inline-block mb-4 "
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           >
-            <Code2 size={20} className="text-warmyellow" />
+            <motion.div
+              className="absolute inset-0 rounded-full z-0 bg-peach"
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+
+            <motion.img
+              src="/tes.png"
+              alt="Foto Freedy"
+              className="w-48 h-48 z-10 rounded-full border-4 border-peach relative object-cover "
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+            />
+            <motion.div
+              className="border-warmyellow bg-primary absolute -bottom-2 -right-2 w-12 h-12 rounded-full flex items-center justify-center border-4 shadow-lg"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            >
+              <Code2 size={20} className="text-warmyellow" />
+            </motion.div>
           </motion.div>
-        </motion.div>
+          <div className="flex flex-col-reverse">
+            {myAbility.map((skill) => {
+              const Icon = iconMap[skill];
+              return (
+                <div
+                  key={skill}
+                  className="flex flex-col items-center text-center"
+                >
+                  {typeof Icon === "string" ? (
+                    <img src={Icon} alt={skill} className="w-10 h-10" />
+                  ) : (
+                    <Icon size={20} className="text-primary" />
+                  )}
+                  <span className="text-sm mt-2">{skill}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
         {/* greeting */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
