@@ -40,15 +40,15 @@ export default function Hero() {
   const loopList = [...myAbility, ...myAbility];
 
   const positionsRight = [
-    { x: 80, y: -60 }, // atas
-    { x: 80, y: 0 }, // tengah
-    { x: 80, y: 60 }, // bawah
+    { x: -20, y: -60 }, // atas
+    { x: 40, y: 0 }, // tengah
+    { x: -20, y: 60 }, // bawah
   ];
 
   const positionsLeft = [
-    { x: -80, y: -60 }, // atas
-    { x: -80, y: 0 }, // tengah
-    { x: -80, y: 60 }, // bawah
+    { x: 20, y: -60 }, // atas
+    { x: -40, y: 0 }, // tengah
+    { x: 20, y: 60 }, // bawah
   ];
   return (
     <section className="bg-warmyellow relative min-h-screen overflow-hidden flex flex-col items-center justify-center text-center py-12 pt-24 px-6">
@@ -92,42 +92,43 @@ export default function Hero() {
           </div>
 
           {/* pp */}
-          <motion.div
-            className="relative inline-block mb-4 "
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-          >
+          <div className="flex justify-center items-center gap-6">
             <motion.div
-              className="absolute inset-0 rounded-full z-0 bg-peach"
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.3, 0.5, 0.3],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-
-            <motion.img
-              src="/tes.png"
-              alt="Foto Freedy"
-              className="w-48 h-48 z-10 rounded-full border-4 border-peach relative object-cover "
-              initial={{ opacity: 0, scale: 0.8 }}
+              className="relative inline-block mb-4 "
+              initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
-            />
-            <motion.div
-              className="border-warmyellow bg-primary absolute -bottom-2 -right-2 w-12 h-12 rounded-full flex items-center justify-center border-4 shadow-lg"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
             >
-              <Code2 size={20} className="text-warmyellow" />
-            </motion.div>
-          </motion.div>
+              <motion.div
+                className="absolute inset-0 rounded-full z-0 bg-peach"
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.3, 0.5, 0.3],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              />
 
+              <motion.img
+                src="/tes.png"
+                alt="Foto Freedy"
+                className="w-48 h-48 z-10 rounded-full border-4 border-peach relative object-cover "
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+              />
+              <motion.div
+                className="border-warmyellow bg-primary absolute -bottom-2 -right-2 w-12 h-12 rounded-full flex items-center justify-center border-4 shadow-lg"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+              >
+                <Code2 size={20} className="text-warmyellow" />
+              </motion.div>
+            </motion.div>
+          </div>
           {/* icon right */}
           <div className="relative w-48 h-48 flex items-center justify-center">
             {myAbility.slice(0, 3).map((skill, index) => {
