@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Code2, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import {
   SiJavascript,
@@ -11,8 +11,8 @@ import {
   SiNodedotjs,
   SiExpress,
 } from "react-icons/si";
-
-const iconMap = {
+import type { IconType } from "react-icons";
+const iconMap: Record<string, IconType | string> = {
   JavaScript: SiJavascript,
   TypeScript: SiTypescript,
   Python: SiPython,
@@ -37,30 +37,37 @@ export default function Hero() {
     "Express",
   ];
 
+  const loopList = [...myAbility, ...myAbility];
   return (
     <section className="bg-warmyellow relative min-h-screen overflow-hidden flex flex-col items-center justify-center text-center py-12 pt-24 px-6">
       {/* content */}
 
       <div className="relative z-10 max-w-4xl mx-auto items-center flex flex-col">
         <div className="flex">
-          <div className="flex flex-col">
-            {/* //icon myAbility */}
-            {myAbility.map((skill) => {
-              const Icon = iconMap[skill];
-              return (
-                <div
-                  key={skill}
-                  className="flex flex-col items-center text-center"
-                >
-                  {typeof Icon === "string" ? (
-                    <img src={Icon} alt={skill} className="w-10 h-10" />
-                  ) : (
-                    <Icon size={20} className="text-primary" />
-                  )}
-                  <span className="text-sm mt-2 flex flex-col">{skill}</span>
-                </div>
-              );
-            })}
+          <div className="h-48 overflow-hidden flex flex-col items-center justify-center">
+            <motion.div
+              animate={{ y: ["0%", "20%"] }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="flex flex-col items-center gap-6"
+            >
+              {loopList.map((skill, i) => {
+                const Icon = iconMap[skill];
+                return (
+                  <div key={i} className="flex flex-col items-center">
+                    {typeof Icon === "string" ? (
+                      <img src={Icon} alt={skill} className="w-10 h-10" />
+                    ) : (
+                      <Icon size={30} className="text-primary" />
+                    )}
+                    <span className="text-sm text-primary mt-1">{skill}</span>
+                  </div>
+                );
+              })}
+            </motion.div>
           </div>
           <motion.div
             className="relative inline-block mb-4 "
@@ -97,23 +104,30 @@ export default function Hero() {
               <Code2 size={20} className="text-warmyellow" />
             </motion.div>
           </motion.div>
-          <div className="flex flex-col-reverse">
-            {myAbility.map((skill) => {
-              const Icon = iconMap[skill];
-              return (
-                <div
-                  key={skill}
-                  className="flex flex-col items-center text-center"
-                >
-                  {typeof Icon === "string" ? (
-                    <img src={Icon} alt={skill} className="w-10 h-10" />
-                  ) : (
-                    <Icon size={20} className="text-primary" />
-                  )}
-                  <span className="text-sm mt-2">{skill}</span>
-                </div>
-              );
-            })}
+          <div className="h-48 overflow-hidden flex flex-col-reverse items-center justify-center">
+            <motion.div
+              animate={{ y: ["0%", "50%"] }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="flex flex-col items-center gap-6"
+            >
+              {loopList.map((skill, i) => {
+                const Icon = iconMap[skill];
+                return (
+                  <div key={i} className="flex flex-col items-center">
+                    {typeof Icon === "string" ? (
+                      <img src={Icon} alt={skill} className="w-10 h-10" />
+                    ) : (
+                      <Icon size={30} className="text-primary" />
+                    )}
+                    <span className="text-sm text-primary mt-1">{skill}</span>
+                  </div>
+                );
+              })}
+            </motion.div>
           </div>
         </div>
         {/* greeting */}
