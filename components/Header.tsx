@@ -72,7 +72,7 @@ export default function Header() {
             ))}
             <motion.a
               href="#contact"
-              className="w-full text-center block rounded-lg py-3 mt-2 font-bold bg-red-600 text-white hover:bg-red-700 transition-colors"
+              className="w-full text-center block rounded-lg py-3 mt-2 font-bold bg-primary text-white hover:bg-third active:bg-third transition-colors"
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsMenuOpen(false)}
             >
