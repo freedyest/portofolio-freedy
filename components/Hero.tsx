@@ -38,37 +38,60 @@ export default function Hero() {
   ];
 
   const loopList = [...myAbility, ...myAbility];
+
+  const positionsRight = [
+    { x: 80, y: -60 }, // atas
+    { x: 80, y: 0 }, // tengah
+    { x: 80, y: 60 }, // bawah
+  ];
+
+  const positionsLeft = [
+    { x: -80, y: -60 }, // atas
+    { x: -80, y: 0 }, // tengah
+    { x: -80, y: 60 }, // bawah
+  ];
   return (
     <section className="bg-warmyellow relative min-h-screen overflow-hidden flex flex-col items-center justify-center text-center py-12 pt-24 px-6">
       {/* content */}
 
       <div className="relative z-10 max-w-4xl mx-auto items-center flex flex-col">
         <div className="flex">
-          <div className="h-48 overflow-hidden flex flex-col items-center justify-center">
-            <motion.div
-              animate={{ y: ["0%", "20%"] }}
-              transition={{
-                duration: 20,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="flex flex-col items-center gap-6"
-            >
-              {loopList.map((skill, i) => {
-                const Icon = iconMap[skill];
-                return (
-                  <div key={i} className="flex flex-col items-center">
-                    {typeof Icon === "string" ? (
-                      <img src={Icon} alt={skill} className="w-10 h-10" />
-                    ) : (
-                      <Icon size={30} className="text-primary" />
-                    )}
-                    <span className="text-sm text-primary mt-1">{skill}</span>
-                  </div>
-                );
-              })}
-            </motion.div>
+          {/* icon left */}
+
+          <div className="relative w-48 h-48 flex items-center justify-center">
+            {myAbility.slice(0, 3).map((skill, index) => {
+              const Icon = iconMap[skill];
+              const pos = positionsLeft[index];
+              return (
+                <motion.div
+                  key={skill}
+                  className="absolute flex flex-col items-center justify-center"
+                  style={{ width: 80, height: 80 }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{
+                    opacity: 1,
+                    x: pos.x,
+                    y: pos.y,
+                    scale: 1,
+                  }}
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.2,
+                    type: "spring",
+                  }}
+                >
+                  {typeof Icon === "string" ? (
+                    <img src={Icon} alt={skill} className="w-10 h-10" />
+                  ) : (
+                    <Icon size={30} className="text-primary" />
+                  )}
+                  <span className="text-sm text-primary mt-1">{skill}</span>
+                </motion.div>
+              );
+            })}
           </div>
+
+          {/* pp */}
           <motion.div
             className="relative inline-block mb-4 "
             initial={{ opacity: 0, scale: 0.5 }}
@@ -104,30 +127,39 @@ export default function Hero() {
               <Code2 size={20} className="text-warmyellow" />
             </motion.div>
           </motion.div>
-          <div className="h-48 overflow-hidden flex flex-col-reverse items-center justify-center">
-            <motion.div
-              animate={{ y: ["0%", "50%"] }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="flex flex-col items-center gap-6"
-            >
-              {loopList.map((skill, i) => {
-                const Icon = iconMap[skill];
-                return (
-                  <div key={i} className="flex flex-col items-center">
-                    {typeof Icon === "string" ? (
-                      <img src={Icon} alt={skill} className="w-10 h-10" />
-                    ) : (
-                      <Icon size={30} className="text-primary" />
-                    )}
-                    <span className="text-sm text-primary mt-1">{skill}</span>
-                  </div>
-                );
-              })}
-            </motion.div>
+
+          {/* icon right */}
+          <div className="relative w-48 h-48 flex items-center justify-center">
+            {myAbility.slice(0, 3).map((skill, index) => {
+              const Icon = iconMap[skill];
+              const pos = positionsRight[index];
+              return (
+                <motion.div
+                  key={skill}
+                  className="absolute flex flex-col items-center justify-center"
+                  style={{ width: 80, height: 80 }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{
+                    opacity: 1,
+                    x: pos.x,
+                    y: pos.y,
+                    scale: 1,
+                  }}
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.2,
+                    type: "spring",
+                  }}
+                >
+                  {typeof Icon === "string" ? (
+                    <img src={Icon} alt={skill} className="w-10 h-10" />
+                  ) : (
+                    <Icon size={30} className="text-primary" />
+                  )}
+                  <span className="text-sm text-primary mt-1">{skill}</span>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
         {/* greeting */}
