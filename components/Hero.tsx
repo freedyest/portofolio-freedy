@@ -52,52 +52,12 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center text-center py-12 pt-36 px-6"
-      style={{ backgroundColor: "#fdf2d4" }}
+      id="home"
+      className="relative bg-warmyellow min-h-screen w-full overflow-hidden flex flex-col items-center justify-center text-center py-12 pt-36 px-6"
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute w-96 h-96 rounded-full opacity-20"
-          style={{
-            background: "radial-gradient(circle, #fca931 0%, transparent 70%)",
-            top: "-10%",
-            left: "-10%",
-          }}
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.3, 0.2],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute w-96 h-96 rounded-full opacity-20"
-          style={{
-            background: "radial-gradient(circle, #fd8b2f 0%, transparent 70%)",
-            bottom: "-10%",
-            right: "-10%",
-          }}
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.2, 0.3, 0.2],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto items-center flex flex-col">
-        {/* Icons and Profile Section */}
+      <div className="relative z-10 w-full flex flex-col items-center justify-center">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
-          {/* Left Icons - Hidden on mobile */}
+          {/* LEFT ICONS */}
           <div className="hidden lg:flex relative w-64 h-64 items-center justify-center">
             {myAbility.slice(0, 3).map((skill, index) => {
               const Icon = iconMap[skill];
@@ -120,25 +80,15 @@ export default function Hero() {
                     type: "spring",
                     stiffness: 80,
                   }}
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: pos.rotate + 10,
-                    transition: { duration: 0.3 },
-                  }}
+                  whileHover={{ scale: 1.2, rotate: pos.rotate + 10 }}
                 >
-                  <div
-                    className="flex flex-col items-center justify-center bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow"
-                    style={{ borderColor: "#fca931", borderWidth: "2px" }}
-                  >
+                  <div className="flex flex-col items-center justify-center bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow border-2 border-peach">
                     {typeof Icon === "string" ? (
                       <img src={Icon} alt={skill} className="w-12 h-12" />
                     ) : (
-                      <Icon size={40} style={{ color: "#d02008" }} />
+                      <Icon size={40} className="text-primary" />
                     )}
-                    <span
-                      className="text-xs font-semibold mt-2"
-                      style={{ color: "#d02008" }}
-                    >
+                    <span className="text-xs font-semibold mt-2 text-primary">
                       {skill}
                     </span>
                   </div>
@@ -147,7 +97,7 @@ export default function Hero() {
             })}
           </div>
 
-          {/* Profile Picture */}
+          {/* PROFILE PIC */}
           <div className="flex justify-center items-center">
             <motion.div
               className="relative inline-block"
@@ -155,14 +105,9 @@ export default function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, type: "spring", stiffness: 100 }}
             >
-              {/* Outer glow effect */}
               <motion.div
-                className="absolute inset-0 rounded-full z-0"
-                style={{ backgroundColor: "#fca931" }}
-                animate={{
-                  scale: [1, 1.15, 1],
-                  opacity: [0.3, 0.5, 0.3],
-                }}
+                className="absolute inset-0 rounded-full z-0 bg-peach"
+                animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
                 transition={{
                   duration: 3,
                   repeat: Infinity,
@@ -170,56 +115,39 @@ export default function Hero() {
                 }}
               />
 
-              {/* Rotating border effect */}
               <motion.div
-                className="absolute inset-0 rounded-full"
-                style={{
-                  background: `conic-gradient(from 0deg, #fca931, #fd8b2f, #d02008, #fca931)`,
-                  padding: "4px",
-                }}
+                className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,#fca931,#fd8b2f,#d02008,#fca931)] p-[4px]"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
               >
-                <div
-                  className="w-full h-full rounded-full"
-                  style={{ backgroundColor: "#fdf2d4" }}
-                />
+                <div className="w-full h-full rounded-full bg-warmyellow" />
               </motion.div>
 
               <motion.img
                 src="/tes.png"
                 alt="Foto Freedy"
-                className="w-56 h-56 lg:w-64 lg:h-64 z-10 rounded-full relative object-cover"
-                style={{ borderColor: "#fca931", borderWidth: "4px" }}
+                className="w-56 h-56 lg:w-64 lg:h-64 z-10 rounded-full relative object-cover border-4 border-peach"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2 }}
               />
 
-              {/* Rotating icon badge */}
+              {/* Rotating badge */}
               <motion.div
-                className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl"
-                style={{
-                  backgroundColor: "#d02008",
-                  borderColor: "#fdf2d4",
-                  borderWidth: "4px",
-                }}
-                animate={{
-                  rotate: 360,
-                  y: [-2, 2, -2],
-                }}
+                className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl bg-primary border-4 border-warmyellow"
+                animate={{ rotate: 360, y: [-2, 2, -2] }}
                 transition={{
                   rotate: { duration: 3, repeat: Infinity, ease: "linear" },
                   y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
                 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <Code2 size={28} style={{ color: "#fdf2d4" }} />
+                <Code2 size={28} className="text-warmyellow" />
               </motion.div>
             </motion.div>
           </div>
 
-          {/* Right Icons - Hidden on mobile */}
+          {/* RIGHT ICONS */}
           <div className="hidden lg:flex relative w-64 h-64 items-center justify-center">
             {myAbility.slice(3, 6).map((skill, index) => {
               const Icon = iconMap[skill];
@@ -242,25 +170,15 @@ export default function Hero() {
                     type: "spring",
                     stiffness: 80,
                   }}
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: pos.rotate - 10,
-                    transition: { duration: 0.3 },
-                  }}
+                  whileHover={{ scale: 1.2, rotate: pos.rotate - 10 }}
                 >
-                  <div
-                    className="flex flex-col items-center justify-center bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow"
-                    style={{ borderColor: "#fca931", borderWidth: "2px" }}
-                  >
+                  <div className="flex flex-col items-center justify-center bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow border-2 border-peach">
                     {typeof Icon === "string" ? (
                       <img src={Icon} alt={skill} className="w-12 h-12" />
                     ) : (
-                      <Icon size={40} style={{ color: "#d02008" }} />
+                      <Icon size={40} className="text-primary" />
                     )}
-                    <span
-                      className="text-xs font-semibold mt-2"
-                      style={{ color: "#d02008" }}
-                    >
+                    <span className="text-xs font-semibold mt-2 text-primary">
                       {skill}
                     </span>
                   </div>
@@ -270,45 +188,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Mobile Skills Grid */}
-        <motion.div
-          className="lg:hidden grid grid-cols-3 gap-4 mt-8 mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          {myAbility.slice(0, 6).map((skill, index) => {
-            const Icon = iconMap[skill];
-            return (
-              <motion.div
-                key={`mobile-${skill}`}
-                className="flex flex-col items-center justify-center bg-white rounded-xl p-3 shadow-md"
-                style={{ borderColor: "#fca931", borderWidth: "2px" }}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {typeof Icon === "string" ? (
-                  <img src={Icon} alt={skill} className="w-8 h-8" />
-                ) : (
-                  <Icon size={32} style={{ color: "#d02008" }} />
-                )}
-                <span
-                  className="text-xs font-semibold mt-2 text-center"
-                  style={{ color: "#d02008" }}
-                >
-                  {skill}
-                </span>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-
-        {/* Text Content */}
+        {/* TEXT  */}
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-8"
-          style={{ color: "#fd8b2f" }}
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-8 text-third"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -317,39 +199,29 @@ export default function Hero() {
           <motion.span
             animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
-            style={{ display: "inline-block", transformOrigin: "70% 70%" }}
+            className="inline-block origin-[70%_70%]"
           >
             👋
           </motion.span>
           , Saya{" "}
-          <span className="relative inline-block" style={{ color: "#d02008" }}>
-            Freedy
-            <motion.span
-              className="absolute -bottom-2 left-0 w-full h-1 rounded-full"
-              style={{ backgroundColor: "#fca931" }}
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            />
-          </span>
+          <span className="relative inline-block text-primary">Freedy</span>
         </motion.h1>
 
         <motion.p
-          className="max-w-2xl text-lg md:text-xl mb-8 leading-relaxed"
-          style={{ color: "#ce5e4b" }}
+          className="max-w-2xl text-lg md:text-xl mb-8 leading-relaxed text-secondary"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
           Saya seorang{" "}
-          <span className="font-semibold" style={{ color: "#d02008" }}>
+          <span className="font-semibold text-primary">
             Full Stack Developer
           </span>{" "}
           yang fokus pada pengembangan aplikasi web modern dengan berbagai
           bahasa pemrograman dan teknologi terkini.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/*  BUTTONS */}
         <motion.div
           className="flex flex-col sm:flex-row gap-4 mb-8 w-full sm:w-auto px-4 sm:px-0"
           initial={{ y: 30, opacity: 0 }}
@@ -358,115 +230,49 @@ export default function Hero() {
         >
           <motion.a
             href="#projects"
-            className="relative px-8 py-4 rounded-2xl font-bold text-lg shadow-xl overflow-hidden group"
-            style={{ backgroundColor: "#d02008", color: "#fdf2d4" }}
+            className="relative px-8 py-4 rounded-2xl font-bold text-lg shadow-xl overflow-hidden group bg-primary text-warmyellow"
             whileHover={{ scale: 1.05, y: -3 }}
-            whileTap={{ scale: 0.98 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <motion.div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100"
-              style={{ background: "linear-gradient(45deg, #fd8b2f, #fca931)" }}
-              transition={{ duration: 0.3 }}
-            />
+            <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-third to-peach" />
             <span className="relative z-10 flex items-center gap-2 justify-center">
-              Lihat Proyek
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                →
-              </motion.span>
+              Lihat Proyek{" "}
+              <motion.span animate={{ x: [0, 5, 0] }}>→</motion.span>
             </span>
           </motion.a>
 
           <motion.a
             href="#contact"
-            className="relative px-8 py-4 rounded-2xl font-bold text-lg shadow-xl overflow-hidden group bg-transparent"
-            style={{
-              borderColor: "#fca931",
-              borderWidth: "3px",
-              color: "#d02008",
-            }}
-            whileHover={{
-              scale: 1.05,
-              y: -3,
-              backgroundColor: "#fca931",
-              color: "#fdf2d4",
-            }}
-            whileTap={{ scale: 0.98 }}
+            className="relative px-8 py-4 rounded-2xl font-bold text-lg shadow-xl overflow-hidden group border-4 border-peach text-primary bg-transparent hover:bg-peach hover:text-warmyellow transition-colors"
+            whileHover={{ scale: 1.05, y: -3 }}
+            whileTap={{ scale: 0.9 }}
           >
             Hubungi Saya
           </motion.a>
         </motion.div>
 
-        {/* Social Links */}
+        {/* SOCIAL  */}
         <motion.div
           className="flex gap-4 justify-center items-center flex-wrap"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-          {[
-            { icon: Github, href: "#", label: "GitHub", color: "#d02008" },
-            { icon: Linkedin, href: "#", label: "LinkedIn", color: "#d02008" },
-            { icon: Mail, href: "#", label: "Email", color: "#d02008" },
-            {
-              icon: Instagram,
-              href: "#",
-              label: "Instagram",
-              color: "#d02008",
-            },
-          ].map((social, index) => (
+          {[Github, Linkedin, Mail, Instagram].map((Icon, index) => (
             <motion.a
-              key={social.label}
-              href={social.href}
-              className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group"
-              style={{
-                backgroundColor: "#fdf2d4",
-                borderColor: "#fca931",
-                borderWidth: "2px",
-                color: social.color,
-              }}
+              key={index}
+              href="#"
+              className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach text-primary"
               whileHover={{ scale: 1.1, y: -3 }}
               whileTap={{ scale: 0.9 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 + index * 0.1 }}
             >
-              <motion.div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100"
-                style={{ backgroundColor: "#d02008" }}
-                transition={{ duration: 0.3 }}
-              />
-              <social.icon
+              <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-primary" />
+              <Icon
                 size={24}
-                className="relative z-10 group-hover:text-[#fdf2d4] transition-colors"
+                className="relative z-10 group-hover:text-warmyellow"
               />
             </motion.a>
           ))}
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
-          transition={{
-            opacity: { delay: 1.5 },
-            y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-          }}
-        >
-          <div
-            className="w-6 h-10 rounded-full flex items-start justify-center pt-2"
-            style={{ borderColor: "#fca931", borderWidth: "2px" }}
-          >
-            <motion.div
-              className="w-1.5 h-2 rounded-full"
-              style={{ backgroundColor: "#d02008" }}
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </div>
         </motion.div>
       </div>
     </section>

@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function Projects() {
-  const projects = [
+export default function Project() {
+  const project = [
     {
       title: "Website Kursus Online",
       desc: "Platform belajar interaktif dengan React & Node.js",
@@ -18,10 +18,10 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-peach/70 text-primary px-8">
+    <section id="project" className="py-20 bg-peach/70 text-primary px-8">
       <h2 className="text-3xl font-bold text-center mb-12">Proyek Saya</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {projects.map((p, i) => (
+        {project.map((p, i) => (
           <motion.div
             key={i}
             className="p-6 bg-warmyellow rounded-xl hover:scale-105 transition"

@@ -10,18 +10,18 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-warmyellow/40 backdrop-blur-md text-primary shadow-md px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between relative">
-        {/* Logo - Fixed Width */}
+        {/* Logo  */}
         <div className="w-40">
           <h1 className="text-3xl font-bold">Freedy</h1>
         </div>
 
-        {/* Navigation - Absolute Center */}
-        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-2">
+        {/* Navigationr */}
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-between gap-2">
           {["Home", "About", "Project", "Contact"].map((item) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="px-4 py-2 text-lg font-semibold transition-all duration-300 hover:text-red-700 hover:scale-110 rounded-lg"
+              className="px-4 py-2 text-lg font-semibold transition-all duration-300  hover:scale-110 rounded-lg"
               whileTap={{ scale: 0.9 }}
             >
               {item}
@@ -29,7 +29,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA Button - Fixed Width */}
+        {/*  Button  */}
         <div className="w-40 flex justify-end items-center gap-2">
           <motion.a
             href="#contact"
