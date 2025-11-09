@@ -49,9 +49,9 @@ export default function Project() {
             className="block h-full"
           >
             <motion.div
-              className="flex flex-col justify-between h-full p-6 bg-warmyellow rounded-xl 
+              className="group flex flex-col justify-between h-full p-6 bg-warmyellow rounded-xl 
                    hover:shadow-2xl hover:shadow-yellow-500/40 hover:border-2 
-                   hover:border-primary cursor-pointer"
+                   hover:border-primary cursor-pointer overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
@@ -68,7 +68,7 @@ export default function Project() {
               <img
                 src={p.img}
                 alt={p.title}
-                className="w-full h-48 object-cover rounded-lg mb-4"
+                className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform"
               />
               <div>
                 <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
