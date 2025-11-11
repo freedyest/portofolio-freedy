@@ -2,25 +2,25 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-gray-950 text-white text-center px-8"
+      className="py-20 bg-peach/90 text-primary text-center px-8"
     >
-      <h2 className="text-3xl font-bold mb-6">Hubungi Saya</h2>
-      <form className="flex flex-col gap-4 max-w-md mx-auto">
+      <h2 className="text-3xl text-primary font-bold mb-6">Hubungi Saya</h2>
+      <form className="flex flex-col gap-4 max-w-md mx-auto  ">
         <input
           type="text"
-          placeholder="Nama"
-          className="p-3 rounded bg-gray-800 border border-gray-700"
+          placeholder="Name"
+          className="p-3 focus:outline-none rounded bg-warmyellow border border-primary/80 focus:border-2 focus:border-primary"
         />
         <input
           type="email"
           placeholder="Email"
-          className="p-3 rounded bg-gray-800 border border-gray-700"
+          className="p-3 focus:outline-none rounded bg-warmyellow border border-primary/80 focus:border-2 focus:border-primary"
         />
         <textarea
           placeholder="Pesan"
-          className="p-3 rounded bg-gray-800 border border-gray-700 h-32"
+          className="p-3 focus:outline-none rounded border-primary/80 bg-warmyellow border  h-32 focus:border-2 focus:border-primary"
         ></textarea>
-        <button className="bg-blue-600 py-2 rounded hover:bg-blue-700 transition">
+        <button className=" text-lg bg-primary text-white py-2 rounded hover:scale-105 transition font-semibold h-16">
           Kirim Pesan
         </button>
       </form>
