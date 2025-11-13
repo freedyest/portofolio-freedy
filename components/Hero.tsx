@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Code2, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import {
+  SiPhp,
   SiJavascript,
   SiTypescript,
   SiPython,
@@ -17,7 +18,7 @@ const iconMap: Record<string, IconType | string> = {
   JavaScript: SiJavascript,
   TypeScript: SiTypescript,
   Python: SiPython,
-  Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  PHP: SiPhp,
   "Tailwind CSS": SiTailwindcss,
   React: SiReact,
   "Next.js": SiNextdotjs,
@@ -30,7 +31,7 @@ export default function Hero() {
     "JavaScript",
     "TypeScript",
     "Python",
-    "Java",
+    "PHP",
     "Tailwind CSS",
     "React",
     "Next.js",
