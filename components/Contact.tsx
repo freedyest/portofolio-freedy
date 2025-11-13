@@ -8,9 +8,9 @@ export default function Contact() {
   const [popupType, setPopupType] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.target;
+    const form = e.currentTarget;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
