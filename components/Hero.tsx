@@ -11,10 +11,13 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiExpress,
+  SiOpenjdk,
+  SiCplusplus,
+  SiBootstrap,
 } from "react-icons/si";
 import type { IconType } from "react-icons";
 
-const iconMap: Record<string, IconType | string> = {
+const iconMap: Record<string, IconType> = {
   JavaScript: SiJavascript,
   TypeScript: SiTypescript,
   Python: SiPython,
@@ -24,6 +27,9 @@ const iconMap: Record<string, IconType | string> = {
   "Next.js": SiNextdotjs,
   "Node.js": SiNodedotjs,
   Express: SiExpress,
+  "OpenJDK (Java)": SiOpenjdk,
+  "C++": SiCplusplus,
+  Bootstrap: SiBootstrap,
 };
 
 export default function Hero() {
@@ -37,6 +43,9 @@ export default function Hero() {
     "Next.js",
     "Node.js",
     "Express",
+    "OpenJDK (Java)",
+    "C++",
+    "Bootstrap",
   ];
 
   const positionsRight = [
@@ -59,7 +68,7 @@ export default function Hero() {
       <div className="relative z-10 w-full flex flex-col items-center justify-center">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
           {/* LEFT ICONS */}
-          <div className="hidden lg:flex relative w-64 h-64 items-center justify-center">
+          <div className="hidden lg:flex relative w-64 h-64 items-center justify-center ">
             {myAbility.slice(0, 3).map((skill, index) => {
               const Icon = iconMap[skill];
               const pos = positionsLeft[index];
@@ -83,7 +92,7 @@ export default function Hero() {
                   }}
                   whileHover={{ scale: 1.2, rotate: pos.rotate + 10 }}
                 >
-                  <div className="flex flex-col items-center justify-center bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow border-2 border-peach">
+                  <div className="flex w-24 h-24 rounded-full flex-col items-center justify-center bg-white  p-4 shadow-lg hover:shadow-xl transition-shadow border-2 border-peach">
                     {typeof Icon === "string" ? (
                       <img src={Icon} alt={skill} className="w-12 h-12" />
                     ) : (
@@ -149,7 +158,7 @@ export default function Hero() {
           </div>
 
           {/* RIGHT ICONS */}
-          <div className="hidden lg:flex relative w-64 h-64 items-center justify-center">
+          <div className="hidden rounded-full lg:flex relative w-64 h-64 items-center justify-center">
             {myAbility.slice(3, 6).map((skill, index) => {
               const Icon = iconMap[skill];
               const pos = positionsRight[index];
@@ -173,7 +182,7 @@ export default function Hero() {
                   }}
                   whileHover={{ scale: 1.2, rotate: pos.rotate - 10 }}
                 >
-                  <div className="flex flex-col items-center justify-center bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow border-2 border-peach">
+                  <div className="flex w-24 h-24 rounded-full flex-col items-center justify-center bg-white  p-4 shadow-lg hover:shadow-xl transition-shadow border-2 border-peach">
                     {typeof Icon === "string" ? (
                       <img src={Icon} alt={skill} className="w-12 h-12" />
                     ) : (
