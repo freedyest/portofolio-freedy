@@ -84,7 +84,7 @@ export default function Skill() {
         <h2 className="text-secondary font-bold text-center text-3xl pb-4">
           My Skills
         </h2>
-        <div className="flex flex-wrap gap-4 w-full">
+        <div className="flex flex-wrap gap-4 w-full justify-center">
           <div
             id="programmingLanguages"
             className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
@@ -113,14 +113,117 @@ export default function Skill() {
               ))}
             </div>
           </div>
-          <div className="border-primary border-1 bg-white w-[48%] ">
-            <h2>Data-Base</h2>
+          <div
+            id="databases"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
+              Data Base
+            </h2>
+            <div className="flex gap-4 flex-wrap">
+              {databases.map((lang, index) => (
+                <motion.a
+                  key={index}
+                  href={lang.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
+                  whileHover={{
+                    scale: 1.08,
+                    backgroundColor: "#FFD580",
+                    borderColor: "#FF8C42",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                >
+                  {lang.language}
+                </motion.a>
+              ))}
+            </div>
           </div>
-          <div className="border-primary border-1 bg-white w-[48%] ">
-            <h2>Front-end</h2>
+          <div
+            id="frontEnd"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
+              Front End
+            </h2>
+            <div className="flex gap-4 flex-wrap">
+              {frontEnd.map((lang, index) => (
+                <motion.a
+                  key={index}
+                  href={lang.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
+                  whileHover={{
+                    scale: 1.08,
+                    backgroundColor: "#FFD580",
+                    borderColor: "#FF8C42",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                >
+                  {lang.language}
+                </motion.a>
+              ))}
+            </div>
           </div>
-          <div className="border-primary border-1 bg-white w-[48%] ">
-            <h2>Back-end</h2>
+          <div
+            id="backEnd"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
+              Back End
+            </h2>
+            <div className="flex gap-4 flex-wrap">
+              {backEnd.map((lang, index) => (
+                <motion.a
+                  key={index}
+                  href={lang.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
+                  whileHover={{
+                    scale: 1.08,
+                    backgroundColor: "#FFD580",
+                    borderColor: "#FF8C42",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                >
+                  {lang.language}
+                </motion.a>
+              ))}
+            </div>
+          </div>
+          <div
+            id="otherTools"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
+          >
+            <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
+              Tools
+            </h2>
+            <div className="flex gap-4 flex-wrap">
+              {tools.map((lang, index) => (
+                <motion.a
+                  key={index}
+                  href={lang.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
+                  whileHover={{
+                    scale: 1.08,
+                    backgroundColor: "#FFD580",
+                    borderColor: "#FF8C42",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                >
+                  {lang.language}
+                </motion.a>
+              ))}
+            </div>
           </div>
         </div>
       </motion.div>
