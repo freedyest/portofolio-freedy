@@ -17,7 +17,7 @@ export default function Header() {
 
         {/* Navigationr */}
         <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-between gap-2">
-          {["Home", "Project", "Contact"].map((item) => (
+          {["Home", "About", "Skill", "Project", "Contact"].map((item) => (
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}

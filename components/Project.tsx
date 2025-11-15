@@ -37,7 +37,10 @@ export default function Project() {
   ];
 
   return (
-    <section id="project" className="py-20 bg-peach/70 text-primary px-8">
+    <section
+      id="project"
+      className="min-h-screen py-20 bg-peach/70 text-primary px-8"
+    >
       <h2 className="text-3xl font-bold text-center mb-12">Proyek Saya</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {project.map((p, i) => (
