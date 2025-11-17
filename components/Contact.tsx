@@ -83,7 +83,7 @@ export default function Contact() {
 
         <button
           type="submit"
-          className="text-lg bg-primary text-white py-2 rounded hover:scale-105 transition font-semibold h-16"
+          className="text-lg bg-primary text-white py-2 rounded hover:scale-105 active:scale-95 transition font-semibold h-16"
         >
           Kirim Pesan
         </button>

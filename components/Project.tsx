@@ -13,26 +13,31 @@ export default function Project() {
       title: "Modern Web Local Company Profile",
       img: "../img/mitraa.png",
       desc: "A clean and responsive personal portfolio website designed using pure JavaScript and CSS.",
+      link: "https://github.com/freedyest/mitrariautess",
     },
     {
       title: "To-Do List Application",
       img: "../img/todolist.png",
       desc: "A simple yet effective task management app developed with JavaScript for better daily productivity.",
+      link: "https://github.com/freedyest/mission4",
     },
     {
       title: "Responsive POS Web System",
       img: "../img/kasirweb.png",
       desc: "A responsive point-of-sale web application built with Bootstrap for seamless user experience.",
+      link: "https://github.com/freedyest/kasir-php",
     },
     {
       title: "Digital Guestbook App",
       img: "../img/tamu.png",
       desc: "A lightweight CRUD-based guestbook built with Local Storage for efficient visitor data management.",
+      link: "https://github.com/freedyest/js-form-tamu",
     },
     {
       title: "Online Book Management System",
       img: "../img/bklib.png",
       desc: "A full-stack web application integrated with MongoDB to manage and organize book collections dynamically.",
+      link: "https://github.com/freedyest/book-tracker-frontend",
     },
   ];
 
