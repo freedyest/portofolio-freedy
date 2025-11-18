@@ -4,9 +4,10 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import About from "../components/About";
 import Skill from "../components/Skill";
+
 export default function Home() {
   return (
-    <main>
+    <main className="font-poppins">
       <Hero />
       <About />
       <Skill />

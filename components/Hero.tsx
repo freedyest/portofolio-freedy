@@ -200,7 +200,7 @@ export default function Hero() {
 
         {/* TEXT  */}
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-8 text-third"
+          className="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-8 text-third"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -218,7 +218,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="max-w-2xl text-lg md:text-xl mb-8 leading-relaxed text-secondary"
+          className="font-poppins max-w-2xl text-lg md:text-xl mb-8 leading-relaxed text-secondary"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
