@@ -47,7 +47,7 @@ export default function Project() {
       className="min-h-screen py-20 bg-peach/70 text-primary px-8"
     >
       <h2 className="text-3xl font-bold text-center mb-12">Proyek Saya</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ">
         {project.map((p, i) => (
           <a
             key={i}
@@ -57,7 +57,7 @@ export default function Project() {
             className="block h-full"
           >
             <motion.div
-              className="group flex flex-col justify-between h-full p-6 bg-warmyellow rounded-xl 
+              className="group shadow-lg flex flex-col justify-between h-full p-6 bg-warmyellow rounded-xl 
                    hover:shadow-2xl hover:shadow-yellow-500/40 hover:border-2 
                    hover:border-primary cursor-pointer overflow-hidden"
               initial={{ opacity: 0, y: 30 }}

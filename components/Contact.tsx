@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle, XCircle } from "lucide-react";
+import { Code2, Github, Linkedin, Mail, Instagram } from "lucide-react";
 
 export default function Contact() {
   const [status, setStatus] = useState("");
@@ -89,6 +90,28 @@ export default function Contact() {
         </button>
       </form>
 
+      <motion.div
+        className="flex gap-4 justify-center items-center flex-wrap mt-10"
+        initial={{ y: 30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 1.1 }}
+      >
+        {[Github, Linkedin, Mail, Instagram].map((Icon, index) => (
+          <motion.a
+            key={index}
+            href="#"
+            className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach text-primary"
+            whileHover={{ scale: 1.1, y: -3 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-primary" />
+            <Icon
+              size={24}
+              className="relative z-10 group-hover:text-warmyellow"
+            />
+          </motion.a>
+        ))}
+      </motion.div>
       <AnimatePresence>
         {showPopup && (
           <motion.div

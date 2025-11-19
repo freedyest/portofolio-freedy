@@ -59,6 +59,12 @@ export default function Hero() {
     { x: -50, y: 0, rotate: 0 },
     { x: 30, y: 100, rotate: -15 },
   ];
+  const sosialMedia = [
+    { name: "Github", icon: Github, link: "#" },
+    { name: "Linkedin", icon: Linkedin, link: "#" },
+    { name: "Mail", icon: Mail, link: "#" },
+    { name: "Instagram", icon: Instagram, link: "#" },
+  ];
 
   return (
     <section
@@ -268,21 +274,25 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.1 }}
         >
-          {[Github, Linkedin, Mail, Instagram].map((Icon, index) => (
-            <motion.a
-              key={index}
-              href="#"
-              className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach text-primary"
-              whileHover={{ scale: 1.1, y: -3 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-primary" />
-              <Icon
-                size={24}
-                className="relative z-10 group-hover:text-warmyellow"
-              />
-            </motion.a>
-          ))}
+          {sosialMedia.map((sosmed, index) => {
+            const IconComponent = sosmed.icon;
+            return (
+              <motion.a
+                key={index}
+                href={sosmed.link}
+                className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach text-primary"
+                whileHover={{ scale: 1.1, y: -3 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-primary" />
+
+                <IconComponent
+                  size={24}
+                  className="relative z-10 group-hover:text-warmyellow"
+                />
+              </motion.a>
+            );
+          })}
         </motion.div>
       </div>
     </section>
