@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { motion } from "framer-motion";
 import { Code2, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import {
@@ -33,6 +34,7 @@ const iconMap: Record<string, IconType> = {
 };
 
 export default function Hero() {
+  const [rightOffset, setRightOffset] = React.useState(0);
   const myAbility = [
     "JavaScript",
     "TypeScript",
@@ -66,6 +68,21 @@ export default function Hero() {
     { name: "Instagram", icon: Instagram, link: "#" },
   ];
 
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setRightOffset((prev) => (prev + 3) % myAbility.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const getRightSkills = () => {
+    const skills = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (3 + rightOffset + i) % myAbility.length;
+      skills.push(myAbility[index]);
+    }
+    return skills;
+  };
   return (
     <section
       id="home"
@@ -165,36 +182,35 @@ export default function Hero() {
 
           {/* RIGHT ICONS */}
           <div className="hidden rounded-full lg:flex relative w-64 h-64 items-center justify-center">
-            {myAbility.slice(3, 6).map((skill, index) => {
+            {getRightSkills().map((skill, index) => {
               const Icon = iconMap[skill];
               const pos = positionsRight[index];
               return (
                 <motion.div
-                  key={`right-${skill}`}
+                  key={`right-${skill}-${rightOffset}`}
                   className="absolute"
-                  initial={{ opacity: 0, scale: 0.3, x: 0, y: 0 }}
+                  initial={{ opacity: 0, scale: 0.3 }}
                   animate={{
                     opacity: 1,
+                    scale: 1,
                     x: pos.x,
                     y: pos.y,
-                    scale: 1,
                     rotate: pos.rotate,
                   }}
+                  exit={{ opacity: 0, scale: 0.3 }}
                   transition={{
-                    duration: 1,
-                    delay: index * 0.15 + 0.45,
-                    type: "spring",
-                    stiffness: 80,
+                    duration: 0.5,
+                    ease: "easeOut",
                   }}
                   whileHover={{ scale: 1.2, rotate: pos.rotate - 10 }}
                 >
-                  <div className="flex w-24 h-24 rounded-full flex-col items-center justify-center bg-white  p-4 shadow-lg hover:shadow-xl transition-shadow border-2 border-peach">
+                  <div className="flex w-24 h-24 rounded-full flex-col items-center justify-center bg-white  p-4 shadow-lg hover:shadow-xl transition-shadow border-2 border-orange-300">
                     {typeof Icon === "string" ? (
                       <img src={Icon} alt={skill} className="w-12 h-12" />
                     ) : (
                       <Icon size={40} className="text-primary" />
                     )}
-                    <span className="text-xs font-semibold mt-2 text-primary">
+                    <span className="text-xs font-semibold mt-2 text-orange-600">
                       {skill}
                     </span>
                   </div>
