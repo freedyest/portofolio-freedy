@@ -51,7 +51,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen relative py-20 bg-peach/90 text-primary text-center px-8"
+      className="md:min-h-screen relative md:py-20 pt-12 bg-peach/90 pb-12 text-primary text-center px-8"
     >
       <h2 className="text-3xl text-primary font-bold mb-6">Hubungi Saya</h2>
 

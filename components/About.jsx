@@ -36,7 +36,7 @@ export default function About() {
         </h2>
         <motion.div
           id="intro"
-          className="mt-10 border-2 border-primary bg-warmyellow rounded-lg w-4/5 shadow-lg flex flex-col"
+          className="mt-10 border-2 border-primary bg-warmyellow rounded-lg w-full md:w-4/5 shadow-lg flex flex-col"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

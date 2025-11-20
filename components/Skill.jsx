@@ -73,7 +73,7 @@ export default function Skill() {
   return (
     <section
       id="skill"
-      className="min-h-screen py-20 bg-warmyellow text-secondary px-8"
+      className="min-h-screen py-20 bg-warmyellow text-secondary px-2 md:px-8"
     >
       <motion.div
         className="flex flex-col items-center pt-8 gap-8"
@@ -84,15 +84,15 @@ export default function Skill() {
         <h2 className="text-secondary font-bold text-center text-3xl pb-4">
           My Skills
         </h2>
-        <div className="flex flex-wrap gap-4 w-full justify-center">
+        <div className="flex flex-wrap gap-4 w-full justify-center px-4 md:px-0">
           <div
             id="programmingLanguages"
-            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6  bg-white md:w-[48%] hover:shadow-2xl transition-shadow duration-300"
           >
             <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
               Programming Languages
             </h2>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-row flex-wrap">
               {programmingLanguages.map((lang, index) => (
                 <motion.a
                   key={index}
@@ -115,7 +115,7 @@ export default function Skill() {
           </div>
           <div
             id="databases"
-            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white md:w-[48%] hover:shadow-2xl transition-shadow duration-300"
           >
             <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
               Data Base
@@ -143,7 +143,7 @@ export default function Skill() {
           </div>
           <div
             id="frontEnd"
-            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white md:w-[48%] hover:shadow-2xl transition-shadow duration-300"
           >
             <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
               Front End
@@ -171,7 +171,7 @@ export default function Skill() {
           </div>
           <div
             id="backEnd"
-            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white md:w-[48%] hover:shadow-2xl transition-shadow duration-300"
           >
             <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
               Back End
@@ -199,7 +199,7 @@ export default function Skill() {
           </div>
           <div
             id="otherTools"
-            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white w-[48%] hover:shadow-2xl transition-shadow duration-300"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6 bg-white md:w-[48%] hover:shadow-2xl transition-shadow duration-300"
           >
             <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
               Tools
