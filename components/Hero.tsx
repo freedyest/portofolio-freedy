@@ -35,6 +35,8 @@ const iconMap: Record<string, IconType> = {
 
 export default function Hero() {
   const [rightOffset, setRightOffset] = React.useState(0);
+  const [leftOffset, setLeftOffset] = React.useState(0);
+
   const myAbility = [
     "JavaScript",
     "TypeScript",
@@ -67,13 +69,22 @@ export default function Hero() {
     { name: "Mail", icon: Mail, link: "#" },
     { name: "Instagram", icon: Instagram, link: "#" },
   ];
-
   React.useEffect(() => {
     const interval = setInterval(() => {
       setRightOffset((prev) => (prev + 3) % myAbility.length);
+      setLeftOffset((prev) => (prev - 3 + myAbility.length) % myAbility.length);
     }, 3000);
+
     return () => clearInterval(interval);
   }, []);
+  const getLeftSkills = () => {
+    const skills = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (leftOffset + i) % myAbility.length;
+      skills.push(myAbility[index]);
+    }
+    return skills;
+  };
 
   const getRightSkills = () => {
     const skills = [];
@@ -92,7 +103,7 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
           {/* LEFT ICONS */}
           <div className="hidden lg:flex relative w-64 h-64 items-center justify-center ">
-            {myAbility.slice(0, 3).map((skill, index) => {
+            {getLeftSkills().map((skill, index) => {
               const Icon = iconMap[skill];
               const pos = positionsLeft[index];
               return (
@@ -199,8 +210,10 @@ export default function Hero() {
                   }}
                   exit={{ opacity: 0, scale: 0.3 }}
                   transition={{
-                    duration: 0.5,
-                    ease: "easeOut",
+                    duration: 1,
+                    delay: index * 0.15,
+                    type: "spring",
+                    stiffness: 80,
                   }}
                   whileHover={{ scale: 1.2, rotate: pos.rotate - 10 }}
                 >
