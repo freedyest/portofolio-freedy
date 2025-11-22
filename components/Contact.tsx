@@ -57,12 +57,12 @@ export default function Contact() {
     {
       name: "Mail",
       icon: Mail,
-      link: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+      link: " https://mail.google.com/mail/?view=cm&fs=1&to=freedyjob@gmail.com",
     },
     {
       name: "Instagram",
       icon: Instagram,
-      link: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+      link: "https://www.instagram.com/freedyestiw?igsh=MTB4enFiN2NocTNhYg==",
     },
   ];
   return (

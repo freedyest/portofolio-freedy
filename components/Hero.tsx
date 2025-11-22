@@ -73,12 +73,12 @@ export default function Hero() {
     {
       name: "Mail",
       icon: Mail,
-      link: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+      link: " https://mail.google.com/mail/?view=cm&fs=1&to=freedyjob@gmail.com",
     },
     {
       name: "Instagram",
       icon: Instagram,
-      link: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+      link: "https://www.instagram.com/freedyestiw?igsh=MTB4enFiN2NocTNhYg==",
     },
   ];
   React.useEffect(() => {
@@ -286,7 +286,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
         >
           <motion.a
-            href="#projects"
+            href="#project"
             className="relative px-8 py-4 rounded-2xl font-bold text-lg shadow-xl overflow-hidden group bg-primary text-warmyellow"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.9 }}
