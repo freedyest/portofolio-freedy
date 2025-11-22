@@ -117,6 +117,8 @@ export default function Contact() {
           const IconComponent = sosmed.icon;
           return (
             <motion.a
+              target="_blank"
+              rel="noopener noreferrer"
               key={index}
               href={sosmed.link}
               className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach text-primary"

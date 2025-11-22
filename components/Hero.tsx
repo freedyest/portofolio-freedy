@@ -321,6 +321,8 @@ export default function Hero() {
               <motion.a
                 key={index}
                 href={sosmed.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach text-primary"
                 whileHover={{ scale: 1.1, y: -3 }}
                 whileTap={{ scale: 0.9 }}
