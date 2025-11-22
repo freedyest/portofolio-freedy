@@ -47,7 +47,24 @@ export default function Contact() {
       return () => clearTimeout(timer);
     }
   }, [showPopup]);
-
+  const sosialMedia = [
+    { name: "Github", icon: Github, link: "https://github.com/freedyest" },
+    {
+      name: "Linkedin",
+      icon: Linkedin,
+      link: "https://www.linkedin.com/in/freedy-estiawan-bbb98b244/",
+    },
+    {
+      name: "Mail",
+      icon: Mail,
+      link: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+    },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      link: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+    },
+  ];
   return (
     <section
       id="contact"
@@ -96,21 +113,25 @@ export default function Contact() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.1 }}
       >
-        {[Github, Linkedin, Mail, Instagram].map((Icon, index) => (
-          <motion.a
-            key={index}
-            href="#"
-            className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach text-primary"
-            whileHover={{ scale: 1.1, y: -3 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-primary" />
-            <Icon
-              size={24}
-              className="relative z-10 group-hover:text-warmyellow"
-            />
-          </motion.a>
-        ))}
+        {sosialMedia.map((sosmed, index) => {
+          const IconComponent = sosmed.icon;
+          return (
+            <motion.a
+              key={index}
+              href={sosmed.link}
+              className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach text-primary"
+              whileHover={{ scale: 1.1, y: -3 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-primary" />
+
+              <IconComponent
+                size={24}
+                className="relative z-10 group-hover:text-warmyellow"
+              />
+            </motion.a>
+          );
+        })}
       </motion.div>
       <AnimatePresence>
         {showPopup && (

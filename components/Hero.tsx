@@ -64,10 +64,22 @@ export default function Hero() {
     { x: 30, y: 100, rotate: -15 },
   ];
   const sosialMedia = [
-    { name: "Github", icon: Github, link: "#" },
-    { name: "Linkedin", icon: Linkedin, link: "#" },
-    { name: "Mail", icon: Mail, link: "#" },
-    { name: "Instagram", icon: Instagram, link: "#" },
+    { name: "Github", icon: Github, link: "https://github.com/freedyest" },
+    {
+      name: "Linkedin",
+      icon: Linkedin,
+      link: "https://www.linkedin.com/in/freedy-estiawan-bbb98b244/",
+    },
+    {
+      name: "Mail",
+      icon: Mail,
+      link: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+    },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      link: "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox",
+    },
   ];
   React.useEffect(() => {
     const interval = setInterval(() => {
