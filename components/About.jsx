@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 export default function About() {
   const workexperience = [
     {
-      position: "Internship as Front-End Developer",
-      company: "PT. Nusantara Teknologi",
-      date: "2022 - 2023",
+      position: "Seller",
+      company: "Shopee",
+      date: "Dec 2021 - July 2023",
     },
     {
-      position: "Internship as Front-End Developer",
-      company: "PT. Nusantara Teknologi",
-      date: "2022 - 2023",
+      position: "Staff Undelivery",
+      company: "PT. Tiki Jalur Nugraha Ekakurir (JNE) ",
+      date: "Aug 2023 - Dec 2023",
     },
     {
-      position: "Internship as Front-End Developer",
-      company: "PT. Nusantara Teknologi",
-      date: "2022 - 2023",
+      position: "Seller",
+      company: "Tokogameku",
+      date: "2023 - 2024",
     },
   ];
   return (
