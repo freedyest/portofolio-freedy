@@ -190,7 +190,7 @@ export default function Hero() {
 
               {/* Rotating badge */}
               <motion.div
-                className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl bg-primary border-4 border-warmyellow"
+                className="absolute -bottom-4 -right-4 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl bg-primary border-4 border-warmyellow dark:bg-fire"
                 animate={{ rotate: 360, y: [-2, 2, -2] }}
                 transition={{
                   rotate: { duration: 3, repeat: Infinity, ease: "linear" },
@@ -247,7 +247,7 @@ export default function Hero() {
 
         {/* TEXT  */}
         <motion.h1
-          className="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-8 text-third"
+          className="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold mb-4 mt-8 text-third dark:text-slate-200"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -265,7 +265,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="font-poppins max-w-2xl text-lg md:text-xl mb-8 leading-relaxed text-secondary"
+          className="font-poppins max-w-2xl text-lg md:text-xl mb-8 leading-relaxed text-secondary dark:text-slate-200"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
@@ -287,11 +287,11 @@ export default function Hero() {
         >
           <motion.a
             href="#project"
-            className="relative px-8 py-4 rounded-2xl font-bold text-lg shadow-xl overflow-hidden group bg-primary text-warmyellow"
+            className="relative px-8 py-4 rounded-2xl font-bold text-lg shadow-xl overflow-hidden group bg-primary  text-warmyellow"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.9 }}
           >
-            <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-third to-peach" />
+            <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-third to-peach dark:from-fire dark:to-fire " />
             <span className="relative z-10 flex items-center gap-2 justify-center">
               Lihat Proyek{" "}
               <motion.span animate={{ x: [0, 5, 0] }}>→</motion.span>
@@ -300,7 +300,7 @@ export default function Hero() {
 
           <motion.a
             href="#contact"
-            className="relative px-8 py-4 rounded-2xl font-bold text-lg shadow-xl overflow-hidden group border-4 border-peach text-primary bg-transparent hover:bg-peach hover:text-warmyellow transition-colors"
+            className="relative px-8 py-4 rounded-2xl font-bold text-lg shadow-xl overflow-hidden group border-4 border-peach text-primary bg-transparent dark:bg-slate-600 dark:border-third hover:bg-peach hover:text-warmyellow dark:hover:bg-peach transition-colors "
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -323,7 +323,7 @@ export default function Hero() {
                 href={sosmed.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach text-primary"
+                className="relative w-14 h-14 rounded-xl flex items-center justify-center shadow-lg overflow-hidden group bg-warmyellow border-2 border-peach dark:bg-slate-200 text-primary dark:text-fire"
                 whileHover={{ scale: 1.1, y: -3 }}
                 whileTap={{ scale: 0.9 }}
               >

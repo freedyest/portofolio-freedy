@@ -73,7 +73,7 @@ export default function Skill() {
   return (
     <section
       id="skill"
-      className="min-h-screen py-20 bg-warmyellow text-secondary px-2 md:px-8"
+      className="min-h-screen py-20 bg-warmyellow dark:bg-slate-700 text-secondary px-2 md:px-8"
     >
       <motion.div
         className="flex flex-col items-center pt-8 gap-8"
@@ -81,7 +81,7 @@ export default function Skill() {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
-        <h2 className="text-secondary font-bold text-center text-3xl pb-4">
+        <h2 className="text-secondary dark:text-primary font-bold text-center text-3xl pb-4">
           My Skills
         </h2>
         <div className="flex flex-wrap gap-4 w-full justify-center px-4 md:px-0">

@@ -85,7 +85,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen relative py-20 bg-warmyellow/70 text-primary px-6 "
+      className="min-h-screen relative py-20 bg-warmyellow/70 dark:bg-slate-800 text-primary px-6 "
     >
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
@@ -106,7 +106,7 @@ export default function Contact() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-slate-700 text-lg max-w-2xl mx-auto"
+            className="text-slate-700 dark:text-peach text-lg max-w-2xl mx-auto"
           >
             Punya proyek menarik atau ingin berkolaborasi? Jangan ragu untuk
             menghubungi saya!
@@ -121,7 +121,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-8 hidden md:flex md:flex-col justify-between h-full"
           >
-            <div className="bg-white/70  rounded-3xl p-8 shadow-xl  border-2 border-peach">
+            <div className="bg-white/90  rounded-3xl p-8 shadow-xl  border-2 border-peach">
               <h3 className="text-2xl font-bold text-primary mb-6">
                 Informasi Kontak
               </h3>
@@ -155,7 +155,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="bg-white/70 backdrop-blur-lg rounded-3xl p-8 shadow-xl border-2 border-peach"
+              className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 shadow-xl border-2 border-peach"
             >
               <h3 className="text-2xl font-bold text-primary mb-6">
                 Media Sosial
@@ -196,7 +196,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="h-full"
           >
-            <div className="bg-white/70 h-full rounded-3xl p-8 shadow-xl border-2 border-peach ">
+            <div className="bg-white/90 h-full rounded-3xl p-8 shadow-xl border-2 border-peach ">
               <h3 className="text-2xl font-bold text-primary mb-6">
                 Kirim Pesan
               </h3>

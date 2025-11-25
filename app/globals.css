@@ -8,6 +8,7 @@
   --color-warmyellow: var(--warmyellow);
   --color-third: var(--third);
   --color-bg1: var(--bg1);
+  --color-fire: var(--fire);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -96,7 +97,7 @@
   --warmyellow: #fdf2d4;
   --primary: #fd8b2f;
   --secondary: #ce5e4b;
-  --third: #fd8b2f;
+  --fire: #d02008;
   --bg1: #f9c94d;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);

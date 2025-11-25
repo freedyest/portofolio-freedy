@@ -51,7 +51,7 @@ export default function Header() {
           <button
             onClick={toggleDarkMode}
             aria-label="Toggle dark mode"
-            className="p-2 rounded-lg transition duration-300 text-primary dark:text-warmyellow"
+            className="p-2 rounded-lg transition duration-300 text-primary dark:text-yellow-300"
           >
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
