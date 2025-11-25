@@ -79,7 +79,7 @@ export default function Contact() {
   const contactInfo = [
     { icon: Mail, text: "freedyjob@gmail.com", color: "text-orange-600" },
     { icon: MapPin, text: "Pekanbaru, Riau", color: "text-red-600" },
-    { icon: Phone, text: "Available on request", color: "text-rose-600" },
+    { icon: Phone, text: "085265559396", color: "text-rose-600" },
   ];
 
   return (
@@ -119,7 +119,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-8 hidden md:flex md:flex-col"
+            className="space-y-8 hidden md:flex md:flex-col justify-between h-full"
           >
             <div className="bg-white/70  rounded-3xl p-8 shadow-xl  border-2 border-peach">
               <h3 className="text-2xl font-bold text-primary mb-6">

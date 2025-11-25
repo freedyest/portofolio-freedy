@@ -1,14 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("darkMode") === "true";
+    }
+    return false;
+  });
+
+  const toggleDarkMode = () => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    localStorage.setItem("darkMode", newMode.toString());
+    if (newMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-warmyellow/40 backdrop-blur-md text-primary shadow-md px-6 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-warmyellow/40  dark:bg-slate-500/20 backdrop-blur-md text-primary shadow-md px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between relative">
         {/* Logo  */}
         <div className="w-40">
@@ -31,6 +48,14 @@ export default function Header() {
 
         {/*  Button  */}
         <div className="w-40 flex justify-end items-center gap-2">
+          <button
+            onClick={toggleDarkMode}
+            aria-label="Toggle dark mode"
+            className="p-2 rounded-lg transition duration-300 text-primary dark:text-warmyellow"
+          >
+            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+
           <motion.a
             href="#contact"
             className="hidden md:block px-6 py-2.5 rounded-lg font-bold shadow-lg bg-primary text-white transition-all duration-300 hover:bg-third hover:scale-105 whitespace-nowrap"

@@ -109,7 +109,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative bg-warmyellow min-h-screen w-full overflow-hidden flex flex-col items-center justify-center text-center py-12 pt-36 px-6"
+      className="relative dark:bg-gray-700 bg-warmyellow min-h-screen w-full overflow-hidden flex flex-col items-center justify-center text-center py-12 pt-36 px-6"
     >
       <div className="relative z-10 w-full flex flex-col items-center justify-center">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
