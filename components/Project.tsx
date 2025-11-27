@@ -47,7 +47,7 @@ export default function Project() {
       className="min-h-screen py-20 bg-peach/70 dark:bg-slate-900 text-primary dark:text-fire px-8"
     >
       <h2 className="text-3xl font-bold text-center mb-12 dark:text-third">
-        Proyek Saya
+        My Projects
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ">
         {project.map((p, i) => (

@@ -100,7 +100,7 @@ export default function Contact() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            Mari Terhubung
+            Lets Connect!
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -108,8 +108,8 @@ export default function Contact() {
             transition={{ delay: 0.3 }}
             className="text-slate-700 dark:text-peach text-lg max-w-2xl mx-auto"
           >
-            Punya proyek menarik atau ingin berkolaborasi? Jangan ragu untuk
-            menghubungi saya!
+            Having Interesting Project or Collaboration? Feel Free to Reach Out
+            to Me!
           </motion.p>
         </motion.div>
 
@@ -123,7 +123,7 @@ export default function Contact() {
           >
             <div className="bg-white/90  rounded-3xl p-8 shadow-xl  border-2 border-peach">
               <h3 className="text-2xl font-bold text-primary mb-6">
-                Informasi Kontak
+                Contact Info
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => {
@@ -158,7 +158,7 @@ export default function Contact() {
               className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 shadow-xl border-2 border-peach"
             >
               <h3 className="text-2xl font-bold text-primary mb-6">
-                Media Sosial
+                Social Media
               </h3>
               <div className="flex gap-4 justify-center flex-wrap">
                 {sosialMedia.map((sosmed, index) => {
@@ -198,15 +198,15 @@ export default function Contact() {
           >
             <div className="bg-white/90 h-full rounded-3xl p-8 shadow-xl border-2 border-peach ">
               <h3 className="text-2xl font-bold text-primary mb-6">
-                Kirim Pesan
+                Send Me a Message
               </h3>
               <div className="flex flex-col gap-6">
                 <div className="relative">
-                  <p className="text-slate-700 text-lg p-1">Nama</p>
+                  <p className="text-slate-700 text-lg p-1">Name</p>
                   <input
                     name="name"
                     type="text"
-                    placeholder="Nama Lengkap"
+                    placeholder="Full Name"
                     required
                     value={formData.name}
                     onChange={(e) =>
@@ -228,7 +228,7 @@ export default function Contact() {
                   <input
                     name="email"
                     type="email"
-                    placeholder="Alamat Email"
+                    placeholder="Email Address"
                     required
                     value={formData.email}
                     onChange={(e) =>
@@ -249,7 +249,7 @@ export default function Contact() {
                   <p className="text-slate-700 text-lg p-1">Message</p>
                   <textarea
                     name="message"
-                    placeholder="Tulis pesan Anda di sini..."
+                    placeholder="Write your message here"
                     required
                     value={formData.message}
                     onChange={(e) =>
@@ -276,7 +276,7 @@ export default function Contact() {
                   whileTap={{ scale: 0.98 }}
                   className="w-full text-lg rounded-xl bg-gradient-to-r from-orange-600 to-red-600 text-white py-4 font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 group"
                 >
-                  <span>Kirim Pesan</span>
+                  <span>Send Message</span>
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}

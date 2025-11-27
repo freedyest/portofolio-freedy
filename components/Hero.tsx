@@ -252,7 +252,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          Halo{" "}
+          Hi{" "}
           <motion.span
             animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
@@ -260,7 +260,7 @@ export default function Hero() {
           >
             👋
           </motion.span>
-          , Saya{" "}
+          , I am{" "}
           <span className="relative inline-block text-primary">Freedy</span>
         </motion.h1>
 
@@ -270,12 +270,12 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Saya seorang{" "}
+          I am a{" "}
           <span className="font-semibold text-primary">
             Full Stack Developer
           </span>{" "}
-          yang fokus pada pengembangan aplikasi web modern dengan berbagai
-          bahasa pemrograman dan teknologi terkini.
+          that focuses on developing modern web applications with various
+          programming languages knowledge and up-to-date technologies.
         </motion.p>
 
         {/*  BUTTONS */}
@@ -293,7 +293,7 @@ export default function Hero() {
           >
             <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-third to-peach dark:from-fire dark:to-fire " />
             <span className="relative z-10 flex items-center gap-2 justify-center">
-              Lihat Proyek{" "}
+              My Projects{" "}
               <motion.span animate={{ x: [0, 5, 0] }}>→</motion.span>
             </span>
           </motion.a>
@@ -304,7 +304,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.9 }}
           >
-            Hubungi Saya
+            Contact Me
           </motion.a>
         </motion.div>
 
