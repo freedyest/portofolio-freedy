@@ -87,7 +87,7 @@ export default function Contact() {
       id="contact"
       className="min-h-screen relative py-20 bg-warmyellow/70 dark:bg-slate-800 text-primary px-6 "
     >
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-0 md:px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -196,7 +196,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="h-full"
           >
-            <div className="bg-white/90 h-full rounded-3xl p-8 shadow-xl border-2 border-peach ">
+            <div className="bg-white/90 h-full rounded-3xl p-6 md:p-8 shadow-xl border-2 border-peach ">
               <h3 className="text-2xl font-bold text-primary mb-6">
                 Send Me a Message
               </h3>
@@ -299,7 +299,8 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-primary mb-6">
               Media Sosial
             </h3>
-            <div className="flex gap-4 justify-center flex-wrap">
+
+            <div className="grid grid-cols-4 gap-4 justify-items-center">
               {sosialMedia.map((sosmed, index) => {
                 const IconComponent = sosmed.icon;
                 return (
@@ -319,7 +320,7 @@ export default function Contact() {
                     />
                     <IconComponent
                       size={28}
-                      className="pointer-events-none relative z-10 group-hover:text-white  transition-colors duration-300"
+                      className="pointer-events-none relative z-10 group-hover:text-white transition-colors duration-300"
                     />
                   </motion.a>
                 );

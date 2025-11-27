@@ -180,7 +180,7 @@ export default function Hero() {
               </motion.div>
 
               <motion.img
-                src="/tes.png"
+                src="/tes.jpg"
                 alt="Foto Freedy"
                 className="w-56 h-56 lg:w-64 lg:h-64 z-10 rounded-full relative object-cover border-4 border-peach"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -292,9 +292,18 @@ export default function Hero() {
             whileTap={{ scale: 0.9 }}
           >
             <motion.div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-third to-peach dark:from-fire dark:to-fire " />
-            <span className="relative z-10 flex items-center gap-2 justify-center">
+            <span className="relative z-10 flex items-center justify-center gap-2 h-full leading-none">
               My Projects{" "}
-              <motion.span animate={{ x: [0, 5, 0] }}>→</motion.span>
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                →
+              </motion.span>
             </span>
           </motion.a>
 
