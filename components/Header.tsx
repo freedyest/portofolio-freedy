@@ -38,7 +38,7 @@ export default function Header() {
             <motion.a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="px-4 py-2 text-lg font-semibold transition-all duration-300  hover:scale-110 rounded-lg"
+              className="px-4 py-2 text-lg font-semibold transition-all duration-300 hover:font-bold hover:border-secondary hover:border-1 hover:scale-110 rounded-lg"
               whileTap={{ scale: 0.9 }}
             >
               {item}

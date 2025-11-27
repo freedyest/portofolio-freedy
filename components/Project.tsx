@@ -12,7 +12,7 @@ export default function Project() {
     {
       title: "Modern Web Local Company Profile",
       img: "../img/mitraa.png",
-      desc: "A clean and responsive personal portfolio website designed using pure JavaScript and CSS.",
+      desc: "A clean and responsive local company website designed using pure JavaScript and CSS.",
       link: "https://github.com/freedyest/mitrariautess",
     },
     {

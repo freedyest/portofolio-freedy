@@ -87,7 +87,7 @@ export default function Skill() {
         <div className="flex flex-wrap gap-4 w-full justify-center px-4 md:px-0">
           <div
             id="programmingLanguages"
-            className="border-2 border-secondary rounded-xl shadow-xl p-6  bg-white md:w-[48%] hover:shadow-2xl transition-shadow duration-300"
+            className="border-2 border-secondary rounded-xl shadow-xl p-6  bg-white md:w-[48%] hover:shadow-2xl transition-shadow duration-300 "
           >
             <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-secondary/20 pb-3">
               Programming Languages
@@ -99,7 +99,7 @@ export default function Skill() {
                   href={lang.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
+                  className="dark:hover:text-fire text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
                   whileHover={{
                     scale: 1.08,
                     backgroundColor: "#FFD580",
@@ -127,7 +127,7 @@ export default function Skill() {
                   href={lang.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
+                  className="dark:hover:text-fire text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
                   whileHover={{
                     scale: 1.08,
                     backgroundColor: "#FFD580",
@@ -155,7 +155,7 @@ export default function Skill() {
                   href={lang.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
+                  className="dark:hover:text-fire text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
                   whileHover={{
                     scale: 1.08,
                     backgroundColor: "#FFD580",
@@ -183,7 +183,7 @@ export default function Skill() {
                   href={lang.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
+                  className="dark:hover:text-fire text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
                   whileHover={{
                     scale: 1.08,
                     backgroundColor: "#FFD580",
@@ -211,7 +211,7 @@ export default function Skill() {
                   href={lang.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
+                  className="dark:hover:text-fire text-primary font-medium px-4 py-2 border-2 border-secondary rounded-lg bg-warmyellow hover:shadow-md transition-shadow"
                   whileHover={{
                     scale: 1.08,
                     backgroundColor: "#FFD580",
