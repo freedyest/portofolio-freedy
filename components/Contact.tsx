@@ -197,12 +197,12 @@ export default function Contact() {
             className="h-full"
           >
             <div className="bg-white/90 h-full rounded-3xl p-6 md:p-8 shadow-xl border-2 border-peach ">
-              <h3 className="text-2xl font-bold text-primary mb-6">
+              <h3 className="text-center md:text-start text-2xl font-bold text-primary mb-6">
                 Send Me a Message
               </h3>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-3 md:gap-6">
                 <div className="relative">
-                  <p className="text-slate-700 text-lg p-1">Name</p>
+                  <p className="text-slate-700 text-md md:text-lg p-1">Name</p>
                   <input
                     name="name"
                     type="text"
@@ -214,7 +214,7 @@ export default function Contact() {
                     }
                     onFocus={() => setFocusedInput("name")}
                     onBlur={() => setFocusedInput("")}
-                    className="w-full p-4 rounded-xl bg-white/80 border-2 border-orange-200 focus:border-orange-500 focus:outline-none transition-all duration-300 text-slate-800 placeholder:text-slate-400"
+                    className="w-full p-3 md:p-4 rounded-xl bg-white/80 border-2 border-orange-200 focus:border-orange-500 focus:outline-none transition-all duration-300 text-slate-800 placeholder:text-slate-400"
                   />
                   <motion.div
                     initial={{ scaleX: 0 }}
@@ -224,7 +224,9 @@ export default function Contact() {
                 </div>
 
                 <div className="relative">
-                  <p className="text-slate-700 text-lg p-1">Email</p>
+                  <p className="text-slate-700 text-md md:text-lg  p-1">
+                    Email
+                  </p>
                   <input
                     name="email"
                     type="email"
@@ -236,7 +238,7 @@ export default function Contact() {
                     }
                     onFocus={() => setFocusedInput("email")}
                     onBlur={() => setFocusedInput("")}
-                    className="w-full p-4 rounded-xl bg-white/80 border-2 border-orange-200 focus:border-orange-500 focus:outline-none transition-all duration-300 text-slate-800 placeholder:text-slate-400"
+                    className="w-full p-3 md:p-4 rounded-xl bg-white/80 border-2 border-orange-200 focus:border-orange-500 focus:outline-none transition-all duration-300 text-slate-800 placeholder:text-slate-400"
                   />
                   <motion.div
                     initial={{ scaleX: 0 }}
@@ -246,7 +248,9 @@ export default function Contact() {
                 </div>
 
                 <div className="relative">
-                  <p className="text-slate-700 text-lg p-1">Message</p>
+                  <p className="text-slate-700 text-md md:text-lg p-1">
+                    Message
+                  </p>
                   <textarea
                     name="message"
                     placeholder="Write your message here"
