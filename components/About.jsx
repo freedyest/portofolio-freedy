@@ -47,21 +47,30 @@ export default function About() {
           <p className="text-md text-primary dark:text-fire text-start px-4 pb-2">
             I am an enthusiastic, optimistic, and responsible individual with a
             strong passion for learning and self-improvement. My academic
-            journey began at **Senior High School Santo**, where I graduated
-            with an average score of <span className="font-semibold">92</span>.
+            journey began at{" "}
+            <span className="font-semibold">
+              Senior High School Santo Tarcisius
+            </span>
+            , where I graduated with an average score of{" "}
+            <span className="font-semibold">92</span>.
           </p>
           <p className="text-md text-primary dark:text-fire text-start px-4 pb-2">
-            I continued my education at **Institut Teknologi Pelita Indonesia**,
-            earning a Bachelor’s degree in Informatics Engineering with a GPA of
+            I continued my education at{" "}
+            <span className="font-semibold">
+              Institut Teknologi Pelita Indonesia
+            </span>
+            , earning a Bachelor’s degree in Informatics Engineering with a GPA
+            of
             <span className="font-semibold">3.93/4.00</span>. This experience
             strengthened my technical foundation and shaped my ability to think
             analytically and creatively.
           </p>
           <p className="text-md text-primary dark:text-fire text-start px-4 pb-2">
-            To deepen my practical skills, I joined **Harisenin Bootcamp**,
-            where I gained hands-on experience with real development workflows.
-            In my free time, I actively upgrade myself by exploring new
-            technologies and building personal projects to refine my abilities.
+            To deepen my practical skills, I joined{" "}
+            <span className="font-semibold">Harisenin Bootcamp</span>, where I
+            gained hands-on experience with real development workflows. In my
+            free time, I actively upgrade myself by exploring new technologies
+            and building personal projects to refine my abilities.
           </p>
           <p className="text-md text-primary dark:text-fire text-start px-4 pb-4">
             With a combination of discipline, technical expertise, and a growth
