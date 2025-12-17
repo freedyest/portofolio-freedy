@@ -13,7 +13,7 @@
     }
   }
 
-  --animate-marquee: marquee 8s linear infinite;
+  --animate-marquee: marquee 7s linear infinite;
   --color-peach: var(--peach);
   --color-warmyellow: var(--warmyellow);
   --color-third: var(--third);

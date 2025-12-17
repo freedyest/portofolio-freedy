@@ -81,11 +81,49 @@ export default function Project() {
                 className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform"
               />
               <div>
-                <h3 className="overflow-hidden w-full">
-                  <span className="block w-full text-xl font-semibold mb-2 truncate-none  md:truncate group-hover:truncate-none group-hover:overflow-visible group-hover:text-clip group-hover:animate-marquee md:whitespace-nowrap">
+                <h3 className="relative w-full overflow-hidden">
+                  {/* DEFAULT: TRUNCATE */}
+                  <span
+                    className="
+                      block w-full
+                      text-xl font-semibold mb-2
+
+                      md:truncate
+                      transition-opacity duration-200
+                      group-hover:md:opacity-0
+                    "
+                  >
                     {p.title}
                   </span>
+
+                  {/* MARQUEE (DESKTOP ONLY) */}
+                  <div
+                    className="
+                      absolute inset-0
+                      hidden md:block
+                      opacity-0
+                      transition-opacity duration-200
+                      group-hover:opacity-100
+                      pointer-events-none
+                    "
+                  >
+                    <div
+                      className="
+                        flex w-max
+                        group-hover:animate-marquee
+                        group-hover:[animation-delay:0.5s]
+                      "
+                    >
+                      <span className="text-xl font-semibold whitespace-nowrap pr-10">
+                        {p.title}
+                      </span>
+                      <span className="text-xl font-semibold whitespace-nowrap pr-10">
+                        {p.title}
+                      </span>
+                    </div>
+                  </div>
                 </h3>
+
                 <p className="text-peach-400 line-clamp-3">{p.desc}</p>
               </div>
             </motion.div>
