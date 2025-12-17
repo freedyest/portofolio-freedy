@@ -82,7 +82,7 @@ export default function Project() {
               />
               <div>
                 <h3 className="overflow-hidden w-full">
-                  <span className="block w-full text-xl font-semibold mb-2  md:truncate group-hover:truncate-none group-hover:overflow-visible group-hover:text-clip group-hover:animate-marquee whitespace-nowrap">
+                  <span className="block w-full text-xl font-semibold mb-2 truncate-none  md:truncate group-hover:truncate-none group-hover:overflow-visible group-hover:text-clip group-hover:animate-marquee md:whitespace-nowrap">
                     {p.title}
                   </span>
                 </h3>
