@@ -23,10 +23,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen py-20 bg-peach/70 dark:bg-slate-900 text-primary px-8"
+      className="  py-20 bg-peach/70 dark:bg-slate-900 text-primary px-8"
     >
       <motion.div
-        className="flex flex-col items-center"
+        className="flex max-w-7xl  mx-auto flex-col items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}

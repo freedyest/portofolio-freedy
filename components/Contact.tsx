@@ -219,7 +219,7 @@ export default function Contact() {
                   <motion.div
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: focusedInput === "name" ? 1 : 0 }}
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-orange-500 to-red-500 origin-left"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-orange-500 to-red-500 origin-left"
                   />
                 </div>
 

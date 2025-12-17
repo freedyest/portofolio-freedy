@@ -73,10 +73,10 @@ export default function Skill() {
   return (
     <section
       id="skill"
-      className="min-h-screen py-20 bg-warmyellow dark:bg-slate-700 text-secondary px-2 md:px-8"
+      className=" py-20 bg-warmyellow dark:bg-slate-700 text-secondary px-2 md:px-8"
     >
       <motion.div
-        className="flex flex-col items-center pt-8 gap-8"
+        className="flex flex-col items-center pt-8 gap-8 max-w-7xl mx-auto"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}

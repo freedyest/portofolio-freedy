@@ -81,7 +81,9 @@ export default function Project() {
                 className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform"
               />
               <div>
-                <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 truncate     hover:whitespace-normal hover:overflow-visible hover:text-clip">
+                  {p.title}
+                </h3>
                 <p className="text-peach-400 line-clamp-3">{p.desc}</p>
               </div>
             </motion.div>
