@@ -59,7 +59,7 @@ export default function Project() {
             className="block h-full"
           >
             <motion.div
-              className="group shadow-lg flex flex-col justify-between h-full p-6 bg-warmyellow dark:bg-slate-200 rounded-xl 
+              className="group shadow-lg flex flex-col justify-start h-full p-6 bg-warmyellow dark:bg-slate-200 rounded-xl 
                    hover:shadow-2xl hover:shadow-yellow-500/40 hover:border-2 
                    hover:border-primary cursor-pointer overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
