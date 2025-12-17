@@ -4,6 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  --animate-marquee: marquee 8s linear infinite;
   --color-peach: var(--peach);
   --color-warmyellow: var(--warmyellow);
   --color-third: var(--third);

@@ -49,7 +49,7 @@ export default function Project() {
       <h2 className="text-3xl font-bold text-center mb-12 dark:text-third">
         My Projects
       </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6  w-full max-w-6xl mx-auto ">
         {project.map((p, i) => (
           <a
             key={i}
@@ -81,8 +81,10 @@ export default function Project() {
                 className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform"
               />
               <div>
-                <h3 className="text-xl font-semibold mb-2 truncate     hover:whitespace-normal hover:overflow-visible hover:text-clip">
-                  {p.title}
+                <h3 className="overflow-hidden w-full">
+                  <span className="block w-full text-xl font-semibold mb-2  md:truncate group-hover:truncate-none group-hover:overflow-visible group-hover:text-clip group-hover:animate-marquee whitespace-nowrap">
+                    {p.title}
+                  </span>
                 </h3>
                 <p className="text-peach-400 line-clamp-3">{p.desc}</p>
               </div>
