@@ -44,7 +44,7 @@ export default function Project() {
   return (
     <section
       id="project"
-      className="min-h-screen py-20 bg-peach/70 dark:bg-slate-900 text-primary dark:text-fire px-8"
+      className="py-24 bg-peach/70 dark:bg-slate-900 text-primary dark:text-fire px-8"
     >
       <h2 className="text-3xl font-bold text-center mb-12 dark:text-third">
         My Projects

@@ -85,7 +85,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen relative py-20 bg-warmyellow/70 dark:bg-slate-800 text-primary px-6 "
+      className=" relative py-24 bg-warmyellow/70 dark:bg-slate-800 text-primary px-6 "
     >
       <div className="max-w-6xl mx-auto px-0 md:px-6 relative z-10">
         <motion.div
